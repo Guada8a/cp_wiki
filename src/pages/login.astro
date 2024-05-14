@@ -1,0 +1,29 @@
+---
+import LoginL from "../layouts/LoginL.astro";
+import InputCustom from "../components/inputCustom.jsx";
+import ButtonCustom from "../components/button.jsx";
+
+const email = "";
+
+function attack() {
+  console.log("Attacked");
+}
+---
+
+<LoginL title="Login">
+  <div class="container">
+    <h1 class="text-xl">Login</h1>
+    <form class="m-2">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <InputCustom type="email" id="email" name="email" value={email} />
+      </div>
+      <div class="form-group mt-4">
+        <label for="password">Password</label>
+        <InputCustom type="password" id="password" name="password" />
+        </div>
+
+        <button type="button" class="bg-slate-700 p-4 mt-2" id="attack1" onclick="attack()">Submit</button>
+    </form>
+    </div>
+</LoginL>

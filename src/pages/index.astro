@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import MiComponente from '../components/component.jsx';
+
+const card = "bg-slate-700 text-white p-4 rounded-lg shadow-lg";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Inicio">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
@@ -14,7 +16,12 @@ import MiComponente from '../components/component.jsx';
             Para modificar o crear nuevos componentes, edita los archivos en <code>src/components/</code>.
             Pueden ser archivos <code>.astro</code> o <code>.jsx</code>.
         </p>
+        Esto es un componente de react
         <MiComponente />
+        <p class={card}>
+            Esto no lo borres, ve al index.astro para hacer el login
+            <a href="/login" class="text-gradient">Login</a>
+        </p>
 	</main>
 </Layout>
 
